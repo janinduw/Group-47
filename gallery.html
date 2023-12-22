@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+  
+
+  <body>
+    <nav class = "gallery-nav">
+      <div class="logo">
+        <a href="index.html">Group 47</a>
+      </div>
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html">Contact Us</a></li>
+
+          <!-- Add other navigation links as needed -->
+        </ul>
+      </div>
+    </nav>
+
+    <div id="page-overlay">Group 47</div>
+
+
+    <!-- Hero Section for Gallery -->
+    <section id="hero-gallery">
+      <div class="hero-background">
+        <div class="hero-content">
+          <h1><span class="animated-underline">Our Gallery</span></h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="gallery-container">
+        <figure>
+          <img src="images/LivingRoom1.jpg" alt="Luxurious Living Room" />
+        </figure>
+        <figure>
+          <img src="images/LivingRoom2.jpg" alt="Spacious Living Room" />
+        </figure>
+        <figure>
+          <img src="images/LivingRoom3.jpg" alt="Living Room View" />
+        </figure>
+        <figure>
+          <img src="images/LivingRoom4.jpg" alt="Stylish Living Room" />
+        </figure>
+        <figure>
+          <img src="images/KitchenCount1.jpg" alt="Modern Kitchen" />
+        </figure>
+        <figure>
+          <img src="images/Bedroom1.jpg" alt="Elegant Bedroom" />
+        </figure>
+        <figure>
+          <img src="images/Bedroom2.jpg" alt="Bedroom View" />
+        </figure>
+        <figure>
+          <img src="images/Bedroom3.jpg" alt="Contemporary Bedroom" />
+        </figure>
+        <figure>
+          <img src="images/Bathroom.jpg" alt="Sleek Bathroom" />
+        </figure>
+        <figure>
+          <img src="images/VerticalBathroom.jpg" alt="Vertical Bathroom View" />
+        </figure>
+        <figure>
+          <img src="images/stairway.jpg" alt="Stairway" />
+        </figure>
+        <figure>
+          <img src="images/hallway.jpg" alt="Hallway" />
+        </figure>
+        <figure>
+          <img src="images/elevatorVert.jpg" alt="Elevator" />
+        </figure>
+        <figure>
+          <img src="images/bigdoor.jpg" alt="Big Door" />
+        </figure>
+      </div>
+    </section>
+    
+    <script>
+    window.addEventListener('load', () => {
+            const overlay = document.getElementById('page-overlay');
+
+            overlay.style.opacity = '0';
+
+            overlay.addEventListener('transitionend', () => {
+                overlay.style.display = 'none';
+
+                // Start the underline animation
+                const underlineElement = document.querySelector('.animated-underline');
+                if (underlineElement) {
+                    underlineElement.classList.add('animate');
+                }
+            });
+        });
+
+    </script>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Group 47 Apartments. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+  </body>
+</html>
+

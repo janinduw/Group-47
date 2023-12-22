@@ -1,82 +1,595 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
 }
 
-header,
-footer {
-    background-color: #333;
-    color: white;
+/* Navigation bar styles */
+nav {
+  background: transparent;
+  padding: 2.5vw 0px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  /* Initial state without blur */
+  transition: backdrop-filter 0.3s ease;
+  /* Smooth transition for any changes */
+}
+
+nav.scrolled::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  /* Place it below the nav content but above the page content */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(10px);
+  /* Apply the blur */
+  transition: all 0.5s ease;
+}
+
+.logo {
+  padding-left: 29.448px;
+  /* Adjust as needed for your layout */
+  font-size: 2rem;
+  /* Adjust the size as needed */
+}
+
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  /* Adjust color to match your branding */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 27.448px;
+}
+
+.nav-links li {
+  padding: 0 15px;
+  /* Adjust the padding as needed */
+}
+
+
+.nav-links li a {
+  color: #ffffff;
+  /* Adjust the link color as needed */
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a {
+    color: #ffffff;
+    /* Adjust the link color as needed */
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #fce08e;
+  /* Adjust hover color as needed */
+}
+
+/* Specific Navigation Styles for Gallery Page */
+.gallery-nav .nav-links li a {
+  color: #333;
+    text-decoration: none;
+      font-size: 1.3rem;
+      transition: color 0.3s ease;
+        font-family: "Poppins", sans-serif;
+          font-weight: 500;
+}
+.gallery-nav .logo a{
+
+    text-decoration: none;
+      color: #333;
+      /* Adjust color to match your branding */
+        font-weight: 500;
+}
+
+.gallery-nav .logo {
+  font-size: 2rem;
+  /* Match the font size from homepage */
+  /* Match the font family from homepage */
+  color: #333;
+  /* And other color adjustments as needed */
+  /* Other styles */
+}
+
+.gallery-nav .nav-links li a:hover {
+  color: #746767;
+  /* Different color on hover */
+  /* ...other hover styles if needed... */
+}
+
+#showcase img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: -4px;
+  /* Remove the gap between inline-block elements */
+}
+
+#about {
+  padding: 60px 20px;
+}
+
+
+/* CONTACT US CSS*/
+#contact {
+    background: linear-gradient(to bottom, #ffffff, #e4e4e4);
+      /* Gradient from white to light grey */
+      padding: 80px 0;
+      /* Adjust the padding as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  /* Align children with space around them */
+  position: relative;
+  /* Position relative for the pseudo-element */
+  padding: 0;
+  /* Reset padding */
+  /* Set a max-width for the container */
+  margin: auto;
+  /* Center the container */
+}
+
+/* Pseudo-element for the faded line */
+.contact-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  /* Thin line */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  /* Fade effect */
+}
+
+.contact-info,
+.contact-form {
+  flex-basis: 50%;
+  /* Take up half the space */
+  padding: 0 100px;
+  /* Spacing from the central line */
+}
+
+.contact-info {
+  text-align: left;
+  /* Align the text to the right */
+  font-size: 1.2rem;
+  padding-top: 50px;
+}
+
+.contact-form {
+  text-align: center;
+  
+
+}
+.contact-form .form-group {
+  display: flex;
+  gap: 20px;
+  /* Space between first and last name */
+  margin-bottom: 0px;
+}
+
+.contact-form .form-group input,
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 20px;
+  border: 3px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  /* Space between each field */
+}
+
+.contact-form .submit-btn {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #003366af;
+
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #b59b59;
+  /* A slightly lighter purple on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
     text-align: center;
-    padding: 1em 0;
-}
+  }
 
-main {
+  .contact-container::before {
+    display: none;
+    /* Hide the line on smaller screens */
+  }
+
+  .contact-info,
+  .contact-form {
+    flex-basis: auto;
+    /* Auto-size based on content */
     padding: 20px;
+    /* Padding for smaller screens */
+  }
+
+  .contact-info {
+    text-align: center;
+    /* Center the text on smaller screens */
+  }
+
+  .contact-form {
+    text-align: center;
+    /* Center the form on smaller screens */
+  }
 }
 
-#hero {
-    position: relative;
-    text-align: center;
-    color: white;
+footer {
+  background: #434343;
+  color: #ddd;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#hero .hero-background {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 38.448px;
+  background-attachment: fixed;
+  /* Adjust as needed to align text to the left */
+}
+
+#hero .hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.22);
+  /* Semi-transparent black overlay */
+  z-index: 1;
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+  z-index: 2;
+  max-width: 600px;
+  position: absolute;
+  color: #fff;
 }
 
-#hero img {
-    width: 100%;
-    height: auto;
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
 
-.cta-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.cta-button:hover {
-    background-color: #0056b3;
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }
 
-#about,
-#gallery,
-#contact {
-    padding: 40px 0;
+@media (max-width: 576px) {
+  .nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
 }
 
+/*-------------  ABOUT SECTION CSS -------------*/
+
+#about {
+  background-color: #ffffff;
+  padding: 40px 0;
+  position: relative;
+  z-index: 3;
+    padding: 60px 20px;
+    }
+
+        .about-intro {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 150px;
+            /* Add some space below the intro text */
+        }
+    
+        .about-intro h2 {
+            font-size: 2.8rem;
+            /* Larger font size for the heading */
+            margin-bottom: 20px;
+            /* Space between heading and paragraph */
+        }
+    
+        .about-intro p {
+            font-size: 1.3rem;
+            /* Larger font size for the paragraph */
+            max-width: 700px;
+            /* Set a max-width for better readability */
+            margin: 0 auto;
+            /* Center the paragraph */
+        }
+ 
+.about-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensures content is centered */
+    margin-bottom: 30px;
+    gap: 80px;
+    /* Uniform gap between text and image */
+}
+
+.about-item img {
+    width: 55%;
+    /* Slightly larger than before */
+    object-fit: cover;
+    /* Ensures images maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 40%;
+    /* Adjusted to accommodate larger image */
+
+    opacity: 0.7;
+        /* Initial opacity */
+        transition: opacity 0.8s ease-out;
+}
+
+/* Ensure symmetrical padding for the container */
 .container {
-    width: 80%;
-    margin: auto;
-    max-width: 1200px;
+    padding: 0px 0px;
 }
 
-.gallery-images img {
+.about-item-reverse {
+    flex-direction: row-reverse;
+    /* Inverts the order */
+}
+
+.about-item .about-text h3 {
+    font-size: 1.8rem;
+    /* Increased font size for the heading */
+    margin-bottom: 15px;
+    /* Adjust margin as needed */
+}
+
+.about-item .about-text p {
+    font-size: 1.2rem;
+    /* Increased font size for the paragraph */
+    line-height: 1.6;
+}
+
+
+.about-text[data-aos="fade-up"] {
+    opacity: 1;
+    /* Full opacity when animation triggers */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .about-item,
+    .about-item-reverse {
+        flex-direction: column;
+    }
+
+    .about-item img,
+    .about-text {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .container{
+        padding: 0 20px;
+    }
+
+         .gallery-container {
+           column-count: 2;
+         }
+
+    .about-item-reverse img {
+        order: -1;
+        /* Image comes first */
+    }
+         .about-item .about-text h3 {
+             font-size: 1.8rem;
+             /* Slightly smaller font size for smaller screens */
+         }
+    
+         .about-item .about-text p {
+             font-size: 1.1rem;
+         }
+}
+
+/*-------------  GALLERY PAGE CSS -------------*/
+img {
+  max-width: 100%;
+  display: block;
+}
+
+figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+figure>img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+figure a {
+  color: black;
+  text-decoration: none;
+}
+
+figcaption {
+  grid-row: 2;
+  grid-column: 1;
+  background-color: rgba(255, 255, 255, .5);
+  padding: .2em .5em;
+  justify-self: start;
+}
+
+.gallery-container {
+  column-count: 4;
+  column-gap: 10px;
+}
+
+/* Dark Theme for Gallery Section */
+#gallery {
+  background-color: #ffffff;
+  /* light background color */
+  color: #303030;
+  /* dark text color for contrast */
+}
+
+/* Hero Section for Gallery Page */
+#hero-gallery .hero-background {
+  /* Similar styles to the landing page hero, or customize as needed */
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-gallery .hero-content h1 {
+  color: #878787;
+  /* Adjust text color as needed */
+  font-size: 3.5rem;
+  /* Adjust font size as needed */
+  /* Add more styles if needed */
+}
+
+/* Hero and Gallery Section with White Background */
+#hero-gallery,
+#gallery {
+  background-color: #ffffff;
+  /* White background */
+  color: #333;
+  /* Darker text */
+}
+
+/* Hero Section Title Animation */
+.hero-content h1 {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline {
+  display: inline-block;
+  position: relative;
+  color: #333;
+  /* Dark text color */
+  white-space: nowrap;
+  /* Keep the text and underline in one line */
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #333;
+  transition: all 0.1s ease-in-out;
+}
+
+/* New class to control the start of the animation */
+.animate::after {
+  animation: underlineAnimation 1s ease-out forwards;
+}
+
+/* Keyframe Animation */
+@keyframes underlineAnimation {
+  from {
+    width: 0;
+    left: 50%;
+  }
+
+  to {
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+    left: 0;
+  }
 }
 
-form {
-    max-width: 600px;
-    margin: auto;
-}
-
-input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+#page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+    /* Make sure this is set to 1 */
+    transition: opacity 0.5s ease-out;
 }
