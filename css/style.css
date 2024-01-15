@@ -133,7 +133,7 @@ nav.scrolled::before {
 #contact {
     background: linear-gradient(to bottom, #ffffff, #e4e4e4);
       /* Gradient from white to light grey */
-      padding: 80px 0;
+      padding: 80px 0px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -179,12 +179,10 @@ nav.scrolled::before {
 
 .contact-form {
   text-align: center;
-  
-
 }
 .contact-form .form-group {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   /* Space between first and last name */
   margin-bottom: 0px;
 }
@@ -214,7 +212,7 @@ nav.scrolled::before {
 }
 
 .contact-form .submit-btn:hover {
-  background-color: #b59b59;
+  background-color: #0058afaf;
 }
 
 /* Responsive adjustments */
@@ -261,6 +259,8 @@ footer {
   padding-left: 38.448px;
   background-attachment: fixed;
   /* Adjust as needed to align text to the left */
+
+    background-repeat: no-repeat;
 }
 
 #hero .hero-background::before {
@@ -312,7 +312,7 @@ footer {
   padding: 40px 0;
   position: relative;
   z-index: 3;
-    padding: 60px 20px;
+    padding: 60px 22px;
     }
 
         .about-intro {
@@ -585,4 +585,108 @@ img {
   .contact-form .form-group {
     flex-direction: column;
   }
+
+        .hero-content h1 {
+          font-size: 2rem;
+          /* Larger size for mobile landing page's hero text */
+          
+        }
+}
+
+
+/*hero background image optimized for mobile*/
+@media screen and (max-width: 768px) {
+    #hero .hero-background {
+      background-size: 300%;
+      background-position: 33.3% 0%;
+      height: 100vh;
+      padding-left: 15px;
+      padding-top: 0px;
+
+  
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 1.5rem;
+    /* Smaller size for mobile */
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem;
+    /* Smaller size for mobile nav links */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-links li {
+    padding: 10px 5px;
+    /* Adjust padding for individual nav items */
+  }
+  .logo {
+    padding-left: 12px;
+    padding-right: 15px;
+    /* Smaller padding for mobile */
+    /* Other mobile-specific logo styles if needed */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hero .hero-content {
+    padding-left: 0px;
+    /* Left padding to match the logo */
+    padding-right: 15px;
+    /* Right padding for symmetry */
+  }
+
+    .about-intro h2 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .about-intro p {
+        font-size: 1.3rem; /* Smaller font size for mobile */
+    }
+}
+
+@media screen and (max-width: 768px) {
+  #hero .hero-background {
+    max-height: 90vh;
+    overflow: hidden;
+    /* This will cut off any part of the background that exceeds the max-height */
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .about-item.about-item-reverse {
+    flex-direction: column;
+  }
+
+  .about-item.about-item-reverse .about-text {
+    order: -1;
+    /* place the text above the image */
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .about-text {
+        margin-bottom: -40px; /* Decrease the bottom margin to bring text closer to the image below */
+        /* Or use padding-bottom if that suits your layout better */
+        padding-bottom: 20px;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+#about {
+    background-color: #ffffff;
+    position:static;
+    z-index: 3;
+    padding: 50px 9px;
+  }
+
+
 }
