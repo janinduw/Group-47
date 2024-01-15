@@ -5,24 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener("scroll", function () {
-//   const navBar = document.querySelector("nav");
-//   if (window.scrollY > 50) {
-//     // Adjust the scroll threshold
 navBar.classList.add("scrolled");
-//   } else {
-//     navBar.classList.remove("scrolled");
-//   }
-// });
-
-// document.addEventListener("scroll", function () {
-//   const navBar = document.querySelector("nav");
-//   const scrollY = window.scrollY;
-//   const maxBlur = 10; // Maximum blur in pixels
-//   const blurIntensity = Math.min(scrollY / 100, maxBlur); // Adjust '100' to control speed
-
-//   navBar.style.backdropFilter = `blur(${blurIntensity}px)`;
-// });
 
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -41,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     easing: "ease-out-cubic", // Adjust the easing effect
     once: true, // Whether animation should happen only once
-    // ... other settings as needed
   });
 });
 
@@ -57,7 +39,6 @@ window.addEventListener('load', () => {
 
   // Start the animations after the overlay is hidden
   setTimeout(() => {
-    // Assuming you have a function to start animations
     startAnimations();
   }, 600);
 });

@@ -548,3 +548,41 @@ figcaption {
     /* Make sure this is set to 1 */
     transition: opacity 0.5s ease-out;
 }
+
+
+/* OPTIMIZATIONS FOR MOBILE DEVICES */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .about-item,
+  .about-item-reverse {
+    flex-direction: column;
+  }
+
+  .about-item img,
+  .about-item .about-text {
+    width: 100%;
+  }
+
+  .nav-links li {
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .hero-content h1,
+  .hero-content p {
+    font-size: smaller;
+    /* Adjust font size */
+  }
+
+  .contact-form .form-group {
+    flex-direction: column;
+  }
+}
