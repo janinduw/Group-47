@@ -26,7 +26,6 @@ nav {
   background-color: transparent;
   backdrop-filter: blur(0px);
   transition: backdrop-filter 0.3s ease;
-
 }
 
 nav.scrolled::before {
@@ -72,7 +71,6 @@ nav.scrolled::before {
   padding: 0 15px;
 }
 
-
 .nav-links li a {
   color: #ffffff;
   text-decoration: none;
@@ -81,10 +79,10 @@ nav.scrolled::before {
 }
 
 .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.3rem;
-    transition: color 0.3s ease;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
@@ -94,17 +92,16 @@ nav.scrolled::before {
 /* Specific Navigation Styles for Gallery Page */
 .gallery-nav .nav-links li a {
   color: #333;
-    text-decoration: none;
-      font-size: 1.3rem;
-      transition: color 0.3s ease;
-        font-family: "Poppins", sans-serif;
-          font-weight: 500;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
-.gallery-nav .logo a{
-
-    text-decoration: none;
-      color: #333;
-        font-weight: 500;
+.gallery-nav .logo a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 .gallery-nav .logo {
@@ -128,15 +125,14 @@ nav.scrolled::before {
   padding: 60px 20px;
 }
 
-
 /* CONTACT US CSS*/
 #contact {
-    background: linear-gradient(to bottom, #ffffff, #e4e4e4);
-      /* Gradient from white to light grey */
-      padding: 80px 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  background: linear-gradient(to bottom, #ffffff, #e4e4e4);
+  /* Gradient from white to light grey */
+  padding: 80px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-container {
@@ -151,14 +147,19 @@ nav.scrolled::before {
 
 /* Pseudo-element for the faded line */
 .contact-container::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
   width: 1px;
   /* Thin line */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
   /* Fade effect */
 }
 
@@ -203,7 +204,7 @@ nav.scrolled::before {
   padding: 10px 15px;
   background-color: #003366af;
 
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -260,7 +261,7 @@ footer {
   background-attachment: fixed;
   /* Adjust as needed to align text to the left */
 
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 #hero .hero-background::before {
@@ -312,115 +313,113 @@ footer {
   padding: 40px 0;
   position: relative;
   z-index: 3;
-    padding: 60px 22px;
-    }
+  padding: 60px 22px;
+}
 
-        .about-intro {
-            text-align: center;
-            margin-top: 80px;
-            margin-bottom: 150px;
-        }
-    
-        .about-intro h2 {
-            font-size: 2.8rem;
-            /* Larger font size for the heading */
-            margin-bottom: 20px;
-            /* Space between heading and paragraph */
-        }
-    
-        .about-intro p {
-            font-size: 1.3rem;
-            /* Larger font size for the paragraph */
-            max-width: 700px;
-            /* Set a max-width for better readability */
-            margin: 0 auto;
-            /* Center the paragraph */
-        }
- 
+.about-intro {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 140px;
+}
+
+.about-intro h2 {
+  font-size: 2.8rem;
+  /* Larger font size for the heading */
+  margin-bottom: 20px;
+  /* Space between heading and paragraph */
+}
+
+.about-intro p {
+  font-size: 1.3rem;
+  /* Larger font size for the paragraph */
+  max-width: 700px;
+  /* Set a max-width for better readability */
+  margin: 0 auto;
+  /* Center the paragraph */
+}
+
 .about-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Ensures content is centered */
-    margin-bottom: 30px;
-    gap: 80px;
-    /* Uniform gap between text and image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ensures content is centered */
+  margin-bottom: 30px;
+  gap: 80px;
+  /* Uniform gap between text and image */
 }
 
 .about-item img {
-    width: 55%;
-    /* Slightly larger than before */
-    object-fit: cover;
-    /* Ensures images maintain aspect ratio */
-    border-radius: 10px;
+  width: 55%;
+  /* Slightly larger than before */
+  object-fit: cover;
+  /* Ensures images maintain aspect ratio */
+  border-radius: 10px;
 }
 
 .about-text {
-    width: 40%;
-    /* Adjusted to accommodate larger image */
+  width: 40%;
+  /* Adjusted to accommodate larger image */
 
-    opacity: 0.7;
-        /* Initial opacity */
-        transition: opacity 0.8s ease-out;
+  opacity: 0.7;
+  /* Initial opacity */
+  transition: opacity 0.8s ease-out;
 }
 
 /* Ensure symmetrical padding for the container */
 .container {
-    padding: 0px 0px;
+  padding: 0px 0px;
 }
 
 .about-item-reverse {
-    flex-direction: row-reverse;
-    /* Inverts the order */
+  flex-direction: row-reverse;
+  /* Inverts the order */
 }
 
 .about-item .about-text h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
 }
 
 .about-item .about-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-
 .about-text[data-aos="fade-up"] {
-    opacity: 1;
-    /* Full opacity when animation triggers */
+  opacity: 1;
+  /* Full opacity when animation triggers */
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .about-item,
+  .about-item-reverse {
+    flex-direction: column;
+  }
 
-    .about-item,
-    .about-item-reverse {
-        flex-direction: column;
-    }
+  .about-item img,
+  .about-text {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
-    .about-item img,
-    .about-text {
-        width: 100%;
-        margin-bottom: 15px;
-    }
+  .container {
+    padding: 0 20px;
+  }
 
-    .container{
-        padding: 0 20px;
-    }
+  .gallery-container {
+    column-count: 2;
+  }
 
-         .gallery-container {
-           column-count: 2;
-         }
+  .about-item-reverse img {
+    order: -1;
+  }
+  .about-item .about-text h3 {
+    font-size: 1.8rem;
+  }
 
-    .about-item-reverse img {
-        order: -1;
-    }
-         .about-item .about-text h3 {
-             font-size: 1.8rem;
-         }
-    
-         .about-item .about-text p {
-             font-size: 1.1rem;
-         }
+  .about-item .about-text p {
+    font-size: 1.1rem;
+  }
 }
 
 /*-------------  GALLERY PAGE CSS -------------*/
@@ -437,7 +436,7 @@ figure {
   break-inside: avoid;
 }
 
-figure>img {
+figure > img {
   grid-row: 1 / -1;
   grid-column: 1;
 }
@@ -450,8 +449,8 @@ figure a {
 figcaption {
   grid-row: 2;
   grid-column: 1;
-  background-color: rgba(255, 255, 255, .5);
-  padding: .2em .5em;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.2em 0.5em;
   justify-self: start;
 }
 
@@ -469,7 +468,7 @@ figcaption {
 #hero-gallery .hero-background {
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -477,8 +476,21 @@ figcaption {
 
 #hero-gallery .hero-content h1 {
   color: #878787;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
+
+.gallery-container figure {
+    cursor: pointer;
+}
+
+.gallery-container figure img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-container figure:hover img {
+    transform: scale(1.05);
+}
+
 
 /* Hero and Gallery Section with White Background */
 #hero-gallery,
@@ -501,7 +513,7 @@ figcaption {
 }
 
 .animated-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -545,10 +557,9 @@ figcaption {
   color: #333;
   transition: opacity 0.5s ease-out;
   opacity: 1;
-    /* Make sure this is set to 1 */
-    transition: opacity 0.5s ease-out;
+  /* Make sure this is set to 1 */
+  transition: opacity 0.5s ease-out;
 }
-
 
 /* OPTIMIZATIONS FOR MOBILE DEVICES */
 
@@ -557,9 +568,7 @@ img {
   height: auto;
 }
 
-
 @media screen and (max-width: 768px) {
-
   .about-item,
   .about-item-reverse {
     flex-direction: column;
@@ -586,27 +595,22 @@ img {
     flex-direction: column;
   }
 
-        .hero-content h1 {
-          font-size: 2rem;
-          /* Larger size for mobile landing page's hero text */
-          
-        }
+  .hero-content h1 {
+    font-size: 2rem;
+    /* Larger size for mobile landing page's hero text */
+  }
 }
-
 
 /*hero background image optimized for mobile*/
 @media screen and (max-width: 768px) {
-    #hero .hero-background {
-      background-size: 300%;
-      background-position: 33.3% 0%;
-      height: 100vh;
-      padding-left: 15px;
-      padding-top: 0px;
-
-  
-    }
+  #hero .hero-background {
+    background-size: 300%;
+    background-position: 33.3% 0%;
+    height: 100vh;
+    padding-left: 15px;
+    padding-top: 0px;
+  }
 }
-
 
 @media screen and (max-width: 768px) {
   .logo {
@@ -615,11 +619,10 @@ img {
   }
 
   .nav-links li a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     /* Smaller size for mobile nav links */
   }
 }
-
 
 @media screen and (max-width: 768px) {
   .nav-links li {
@@ -632,14 +635,14 @@ img {
     /* Smaller padding for mobile */
     /* Other mobile-specific logo styles if needed */
   }
-    .nav-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      padding-right: 12px;
-    }
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -650,13 +653,13 @@ img {
     /* Right padding for symmetry */
   }
 
-    .about-intro h2 {
-        font-size: 2.5rem; /* Smaller font size for mobile */
-    }
+  .about-intro h2 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+  }
 
-    .about-intro p {
-        font-size: 1.3rem; /* Smaller font size for mobile */
-    }
+  .about-intro p {
+    font-size: 1.3rem; /* Smaller font size for mobile */
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -665,11 +668,30 @@ img {
     overflow: hidden;
     /* This will cut off any part of the background that exceeds the max-height */
   }
-
 }
 
 @media screen and (max-width: 768px) {
-  .about-item.about-item-reverse {
+  .about-text {
+    margin-bottom: -40px; /* Decrease the bottom margin to bring text closer to the image below */
+    /* Or use padding-bottom if that suits your layout better */
+    padding-bottom: 20px;
+    padding-top: 50px;
+  }
+
+  .about-intro {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  #about {
+    background-color: #ffffff;
+    position: static;
+    z-index: 3;
+    padding: 50px 9px;
+  }
+
+    .about-item.about-item-reverse {
     flex-direction: column;
   }
 
@@ -677,24 +699,172 @@ img {
     order: -1;
     /* place the text above the image */
   }
+
+
+
+  /* CONTACT US SECTION */
+  #contact {
+  background: linear-gradient(to bottom, #ffffff, #e4e4e4);
+  /* Gradient from white to light grey */
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+}
+
+
+/* GALLERY PAGE OPTIMIZED FOR MOBILE */
+
 @media screen and (max-width: 768px) {
-    .about-text {
-        margin-bottom: -40px; /* Decrease the bottom margin to bring text closer to the image below */
-        /* Or use padding-bottom if that suits your layout better */
-        padding-bottom: 20px;
-        padding-top: 50px;
+/* Specific Navigation Styles for Gallery Page */
+.gallery-nav .nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.gallery-nav .logo a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+   padding: 10px 5px;
+}
+
+.gallery-nav .logo {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+
+/*The pictures*/
+
+.gallery-container {
+  column-count: 2;
+  column-gap: 10px;
+}
+
+}
+
+/* LIGHTBOX MODAL */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px; /* Reduced padding for more space */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    position: relative;
+    margin: auto;
+    max-width: 95%; /* Maximum width of the content */
+    max-height: 80vh; /* Maximum height */
+}
+
+.lightbox-content img {
+    width: auto; /* Auto width for scaling */
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain; /* Contain the image within the element */
+    object-position: center; /* Center the image */
+    margin: auto; /* Center the image horizontally */
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 15px; 
+    right: 15px; 
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    font-size: 80px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+   
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(143, 143, 143, 0.177);
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .lightbox-content {
+        display: flex;
+        align-items: center; /* Aligns children (img) vertically */
+        justify-content: center; /* Centers children horizontally */
+        height: 80vh; /* Set a fixed height */
+        padding: 0 10px; /* Add some padding on the sides */
     }
+
+    .lightbox-content img {
+        max-height: 70vh; /* Maximum image height */
+        max-width: 100%; /* Maximum image width */
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%; /* Align arrows vertically */
+        transform: translateY(-50%); /* Offset by half of its height */
+        z-index: 10001;
+        font-size: 20px;
+    }
+
+    .prev {
+        left: 10px; /* Adjust distance from the left */
+    }
+
+    .next {
+        right: 10px; /* Adjust distance from the right */
+    }
+
+    .close {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 }
 
-@media screen and (max-width: 768px) {
-#about {
-    background-color: #ffffff;
-    position:static;
-    z-index: 3;
-    padding: 50px 9px;
-  }
-
-
+html {
+    scroll-behavior:auto;
 }

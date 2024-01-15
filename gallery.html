@@ -14,21 +14,24 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-  
-
   <body>
-    <nav class = "gallery-nav">
+
+    <nav>
       <div class="logo">
-        <a href="index.html">Group 47</a>
+        <a href="index.html" style="color: #3e3e3e;">Group 47</a>
+
       </div>
       <div class="nav-container">
         <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="index.html">Contact Us</a></li>
+    <li><a href="index.html#about" class="nav-link" style="color: #3e3e3e;">About</a></li>
+    <li><a href="gallery.html" style="color: #3e3e3e;">Gallery</a></li>
+    <li><a href="index.html#contact" style="color: #3e3e3e;">Contact Us</a></li>
+
         </ul>
       </div>
     </nav>
+
+
 
     <div id="page-overlay">Group 47</div>
 
@@ -42,53 +45,60 @@
       </div>
     </section>
 
-    <section id="gallery">
-      <div class="gallery-container">
-        <figure>
-          <img src="images/LivingRoom1.jpg" alt="Luxurious Living Room" />
-        </figure>
-        <figure>
-          <img src="images/LivingRoom2.jpg" alt="Spacious Living Room" />
-        </figure>
-        <figure>
-          <img src="images/LivingRoom3.jpg" alt="Living Room View" />
-        </figure>
-        <figure>
-          <img src="images/LivingRoom4.jpg" alt="Stylish Living Room" />
-        </figure>
-        <figure>
-          <img src="images/KitchenCount1.jpg" alt="Modern Kitchen" />
-        </figure>
-        <figure>
-          <img src="images/Bedroom1.jpg" alt="Elegant Bedroom" />
-        </figure>
-        <figure>
-          <img src="images/Bedroom2.jpg" alt="Bedroom View" />
-        </figure>
-        <figure>
-          <img src="images/Bedroom3.jpg" alt="Contemporary Bedroom" />
-        </figure>
-        <figure>
+<section id="gallery">
+  <div class="gallery-container">
+    <figure onclick="openModal(); currentSlide(1)">
+      <img src="images/LivingRoom1.jpg" alt="Luxurious Living Room" />
+    </figure>
+      <figure onclick="openModal(); currentSlide(10)">
+        <img src="images/VerticalBathroom.jpg" alt="Vertical Bathroom View" />
+      </figure>
+    <figure onclick="openModal(); currentSlide(2)">
+      <img src="images/LivingRoom2.jpg" alt="Spacious Living Room" />
+    </figure>
+   
+    <figure onclick="openModal(); currentSlide(3)">
+      <img src="images/LivingRoom3.jpg" alt="Living Room View" />
+    </figure>
+      
+    <figure onclick="openModal(); currentSlide(4)">
+      <img src="images/LivingRoom4.jpg" alt="Stylish Living Room" />
+    </figure>
+    <figure onclick="openModal(); currentSlide(5)">
+      <img src="images/KitchenCount1.jpg" alt="Modern Kitchen" />
+    </figure>
+    <figure onclick="openModal(); currentSlide(6)">
+      <img src="images/Bedroom1.jpg" alt="Elegant Bedroom" />
+    </figure>
+    <figure onclick="openModal(); currentSlide(7)">
+      <img src="images/Bedroom2.jpg" alt="Bedroom View" />
+    </figure>
+    <figure onclick="openModal(); currentSlide(8)">
+      <img src="images/Bedroom3.jpg" alt="Contemporary Bedroom" />
+    </figure> 
+    <figure onclick="openModal(); currentSlide(11)">
+      <img src="images/stairway.jpg" alt="Stairway" />
+    </figure>
+    <figure onclick="openModal(); currentSlide(12)">
+      <img src="images/hallway.jpg" alt="Hallway" />
+    </figure>
+        <figure onclick="openModal(); currentSlide(9)">
           <img src="images/Bathroom.jpg" alt="Sleek Bathroom" />
         </figure>
-        <figure>
-          <img src="images/VerticalBathroom.jpg" alt="Vertical Bathroom View" />
-        </figure>
-        <figure>
-          <img src="images/stairway.jpg" alt="Stairway" />
-        </figure>
-        <figure>
-          <img src="images/hallway.jpg" alt="Hallway" />
-        </figure>
-        <figure>
-          <img src="images/elevatorVert.jpg" alt="Elevator" />
-        </figure>
-        <figure>
+        <figure onclick="openModal(); currentSlide(14)">
           <img src="images/bigdoor.jpg" alt="Big Door" />
         </figure>
-      </div>
-    </section>
+    <figure onclick="openModal(); currentSlide(13)">
+      <img src="images/elevatorVert.jpg" alt="Elevator" />
+    </figure>
+
+
+
+
     
+  </div>
+</section>
+
     <script>
     window.addEventListener('load', () => {
             const overlay = document.getElementById('page-overlay');
@@ -113,6 +123,19 @@
         <p>&copy; 2023 Group 47 Apartments. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="lightbox-content">
+        <!-- Dynamic slideshow will be injected here -->
+      </div>
+    
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
 
     <script src="js/gallery.js"></script>
   </body>
