@@ -43,36 +43,4 @@ window.addEventListener('load', () => {
   }, 600);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the default form submission behavior.
-
-    const formData = new FormData(form);
-
-    fetch("sendmail.php", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.text())
-      .then((data) => {
-        if (data === "success") {
-          // Handle success, e.g., display a success message.
-          alert("Message sent successfully!");
-          form.reset(); // Clear the form fields.
-        } else if (data === "error") {
-          // Handle error, e.g., display an error message.
-          alert("Message sending failed. Please try again.");
-        } else {
-          // Handle other cases (empty fields, direct access error, etc.).
-          alert("An error occurred. Please try again.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("An error occurred. Please try again.");
-      });
-  });
-});
 
