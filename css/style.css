@@ -465,10 +465,12 @@ figcaption {
 }
 
 /* Hero Section for Gallery Page */
+
 #hero-gallery .hero-background {
   background-size: cover;
   background-position: center;
   height: 30vh;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -737,6 +739,16 @@ img {
 .gallery-nav .logo {
   font-size: 1.5rem;
   color: #333;
+}
+
+#hero-gallery .hero-background {
+  background-size: cover;
+  background-position: center;
+  height: 22vh;
+  padding-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
