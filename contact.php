@@ -1,21 +1,31 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $firstName = strip_tags(trim($_POST["firstName"]));
+    $lastName = strip_tags(trim($_POST["lastName"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $message = trim($_POST["message"]);
 
-    $to = "janindu12345@gmail.com";
-    $subject = "New Contact Us Message";
-    $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $firstName $lastName\n\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: janindu12345@gmail.com" . "\r\n" .
-    "Reply-To: $email" . "\r\n" .
-    "X-Mailer: PHP/" . phpversion();
-
-    if(mail($to, $subject, $body, $headers)) {
-        echo 'Message sent successfully!';
-    } else {
-        echo 'Message could not be sent. Please try again later.';
+    if (empty($firstName) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Handle error - input validation failed
+        echo "Invalid input";
+        exit;
     }
+
+    $recipient = "janindu12345@gmail.com";
+    $subject = "New contact from $firstName $lastName";
+    $email_content = "Name: $firstName $lastName\n";
+    $email_content .= "Email: $email\n\n";
+    $email_content .= "Message:\n$message\n";
+
+    $email_headers = "From: <$email>";
+
+    if (mail($recipient, $subject, $email_content, $email_headers)) {
+        echo "Thank You! Your message has been sent.";
+    } else {
+        echo "Oops! Something went wrong, and we couldn't send your message.";
+    }
+} else {
+    // Not a POST request, handle error
+    echo "Error: Invalid request";
 }
 ?>

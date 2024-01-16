@@ -44,3 +44,24 @@ window.addEventListener('load', () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("contactForm");
+  var formMessage = document.getElementById("formMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "contact.php", true);
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        formMessage.textContent = xhr.responseText;
+        form.reset();
+      } else {
+        formMessage.textContent = "Oops! Something went wrong.";
+      }
+    };
+    xhr.send(formData);
+  });
+});

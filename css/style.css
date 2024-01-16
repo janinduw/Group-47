@@ -121,14 +121,11 @@ nav.scrolled::before {
   /* Remove the gap between inline-block elements */
 }
 
-#about {
-  padding: 60px 20px;
-}
 
 /* CONTACT US CSS*/
 #contact {
-  background: linear-gradient(to bottom, #ffffff, #e4e4e4);
-  /* Gradient from white to light grey */
+  background: #ffffff;
+
   padding: 80px 0px;
   display: flex;
   align-items: center;
@@ -310,10 +307,14 @@ footer {
 
 #about {
   background-color: #ffffff;
-  padding: 40px 0;
   position: relative;
-  z-index: 3;
+  z-index: 30;
   padding: 60px 22px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-top: -25px; /* Adjust as needed to overlap with the Hero section */
+
+  
 }
 
 .about-intro {
@@ -365,10 +366,6 @@ footer {
   transition: opacity 0.8s ease-out;
 }
 
-/* Ensure symmetrical padding for the container */
-.container {
-  padding: 0px 0px;
-}
 
 .about-item-reverse {
   flex-direction: row-reverse;
@@ -635,7 +632,6 @@ img {
     padding-left: 12px;
     padding-right: 15px;
     /* Smaller padding for mobile */
-    /* Other mobile-specific logo styles if needed */
   }
   .nav-links {
     list-style: none;
@@ -682,16 +678,21 @@ img {
 
   .about-intro {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 40px;
     margin-bottom: 80px;
   }
 
   #about {
     background-color: #ffffff;
-    position: static;
-    z-index: 3;
+    position: relative;
+    z-index: 30;
     padding: 50px 9px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-top: -25px; /
   }
+
+
 
     .about-item.about-item-reverse {
     flex-direction: column;
@@ -755,9 +756,24 @@ img {
 /*The pictures*/
 
 .gallery-container {
-  column-count: 2;
-  column-gap: 10px;
+  column-count: 1;
+  column-gap: 5px;
 }
+
+figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 5px;
+  break-inside: avoid;
+}
+
+.gallery-container figure img {
+}
+
+.gallery-container figure:hover img {
+}
+
 
 }
 
