@@ -608,6 +608,7 @@ img {
     height: 100vh;
     padding-left: 15px;
     padding-top: 0px;
+      background-attachment: fixed;
   }
 }
 
@@ -663,7 +664,6 @@ img {
 @media screen and (max-width: 768px) {
   #hero .hero-background {
     max-height: 90vh;
-    overflow: hidden;
     /* This will cut off any part of the background that exceeds the max-height */
   }
 }
