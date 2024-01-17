@@ -685,7 +685,7 @@ img {
   #about {
     background-color: #ffffff;
     position: relative;
-    z-index: 30;
+    z-index: 300;
     padding: 50px 9px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
