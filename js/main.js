@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-navBar.classList.add("scrolled");
 
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -63,5 +62,33 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
     xhr.send(formData);
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav");
+  window.addEventListener("scroll", function () {
+    // Check if the page is scrolled more than 50 pixels
+    if (window.scrollY > 600) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav");
+  const heroSection = document.querySelector("#hero"); // Adjust the selector if needed
+  const heroHeight = heroSection.offsetHeight;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > heroHeight) {
+      nav.classList.add("dark-text");
+    } else {
+      nav.classList.remove("dark-text");
+    }
   });
 });
