@@ -1004,7 +1004,9 @@ nav.scrolled::before {
   bottom: 30px;
   z-index: -1;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-  backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(3px); 
+    backdrop-filter: blur(2px); 
+
   transition: all 0.5s ease;
 }
 }
