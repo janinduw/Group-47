@@ -139,7 +139,7 @@ nav.dark-text .nav-links a {
   justify-content: center;
    border-top-left-radius: 25px; /* Curve the top left corner */
     border-top-right-radius: 25px; /* Curve the top right corner */
-    border-top: 5px solid #dbdbdb85;
+    border-top: 5px solid #caa50139;
 }
 
 .contact-container {
@@ -323,6 +323,7 @@ footer {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   margin-top: -25px; /* Adjust as needed to overlap with the Hero section */
+  border-top: 5px solid #caa50139;
   
 }
 
@@ -777,13 +778,6 @@ figure {
   break-inside: avoid;
 }
 
-.gallery-container figure img {
-}
-
-.gallery-container figure:hover img {
-}
-
-
 }
 
 /* LIGHTBOX MODAL */
@@ -867,7 +861,7 @@ figure {
     padding: 50px 0px;
     border-top-left-radius: 25px; /* Curve the top left corner */
     border-top-right-radius: 25px; /* Curve the top right corner */
-    border-top: 5px solid #dbdbdb85;
+     border-top: 5px solid #caa50139;
 }
 
 .perks-intro {
@@ -919,7 +913,8 @@ figure {
 
 
     background-color: #fff; /* White background for each box */
-    border-radius: 15px; /* Rounded edges */
+    border-radius: 20px; /* Rounded edges */
+
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
     padding: 25px; /* Padding inside each box */
     margin: 15px; /* Space between boxes */ 

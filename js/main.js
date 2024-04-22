@@ -43,13 +43,11 @@ window.addEventListener('load', () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
+  // Contact form submission
   var form = document.getElementById("contactForm");
   var formMessage = document.getElementById("formMessage");
-
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
     var formData = new FormData(form);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "contact.php", true);
@@ -63,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     xhr.send(formData);
   });
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {
