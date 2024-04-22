@@ -912,7 +912,7 @@ figure {
     margin-bottom: 30px;
 
 
-    background-color: #fff; /* White background for each box */
+    background-color: #e7e7e767; /* White background for each box */
     border-radius: 20px; /* Rounded edges */
 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
@@ -935,7 +935,7 @@ figure {
 
 .perk-item p {
     font-size: 1rem;
-    color: #666;
+    color: #444444;
 }
 
 @media (min-width: 768px) {

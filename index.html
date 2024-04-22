@@ -12,6 +12,13 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('Dq7UMxa55OUzsy4MQ'); // Replace 'your-public-key' with your actual public key from EmailJS
+        })();
+    </script>
 
 </head>
 
@@ -95,7 +102,7 @@
             <div class="perk-item">
                 <i class="fas fa-building"></i> <!-- Icon for Rooftop -->
                 <h3>Rooftop Area</h3>
-                <p>Host parties and enjoy panoramic views of the city and indian ocean from our rooftop space.</p>
+                <p>Host parties and enjoy panoramic views of the city and ocean from our rooftop space.</p>
             </div>
             <div class="perk-item">
                 <i class="fas fa-tree"></i> <!-- Icon for Peaceful Location -->
@@ -105,7 +112,7 @@
             <div class="perk-item">
                 <i class="fas fa-bed"></i> <!-- Icon for Air-Conditioned Bedrooms -->
                 <h3>Air-Conditioned Bedrooms</h3>
-                <p>All bedrooms are fully air-conditioned, many with stunning views.</p>
+                <p>All bedrooms are fully air-conditioned, many with calming views.</p>
             </div>
             <div class="perk-item">
                 <i class="fas fa-mortar-pestle"></i> <!-- Icon for Modern Kitchens -->
@@ -138,29 +145,28 @@
 </section>
 
 
-
-
-    <!--ENQUIRY SECTION-->
-    <section id="contact">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>Get in touch - Please fill out the form with your enquiry, or call us at (+94) 70 456 4747.</p>
-            </div>
-            <div class="contact-form">
-                <form id="contactForm" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="firstName" placeholder="First name*" required>
-                        <input type="text" name="lastName" placeholder="Last name" required>
-                    </div>
-                    <input type="email" name="email" placeholder="Email*" required>
-                    <textarea name="message" placeholder="What can we help you with?" rows="4" required></textarea>
-                    <button type="submit" class="submit-btn">Submit</button>
-                </form>
-                <div id="formMessage"></div>
-            </div>
+<!-- Contact Form Section -->
+<section id="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Get in touch - Please fill out the form with your enquiry, call us at (+94) 70 456 4747, or email us at <a
+                    href="mailto:group47living@gmail.com" style="color: #caa501ab;">group47living@gmail.com</a>.</p>
         </div>
-    </section>
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" name="from_name" placeholder="First name*" required>
+                    <input type="text" name="last_name" placeholder="Last name" required>
+                </div>
+                <input type="email" name="email" placeholder="Email*" required>
+                <textarea name="message" placeholder="What can we help you with?" rows="4" required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <div id="formMessage"></div>
+        </div>
+    </div>
+</section>
 
 
 <!--FOOTER SECTION-->

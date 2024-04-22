@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -26,6 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    emailjs.sendForm('service_h4hgkgz', 'template_ynyjsfu', this)
+      .then(function() {
+        alert('Message sent successfully!');
+        document.getElementById('contactForm').reset(); // Resets the form after successful submission
+      }, function(error) {
+        console.error('Failed to send the message:', error);
+        alert('Failed to send the message, please try again.');
+      });
+  });
+});
 
 window.addEventListener('load', () => {
   // When the page has fully loaded, fade out the overlay
@@ -41,26 +54,6 @@ window.addEventListener('load', () => {
     startAnimations();
   }, 600);
 });
-
-
-  // Contact form submission
-  var form = document.getElementById("contactForm");
-  var formMessage = document.getElementById("formMessage");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var formData = new FormData(form);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "contact.php", true);
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        formMessage.textContent = xhr.responseText;
-        form.reset();
-      } else {
-        formMessage.textContent = "Oops! Something went wrong.";
-      }
-    };
-    xhr.send(formData);
-  });
 
 
 document.addEventListener("DOMContentLoaded", function () {
