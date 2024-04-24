@@ -25,8 +25,11 @@ body {
 .scroll {
 	width: 60px;
 	height: 60px;
-	border: 2px solid #fce08e;
+	border: 3px solid #fce08e;
 	border-radius: 50%;
+  left: 50%;
+  top: 85%;
+  right: 50%;
 	position: absolute;
 	animation: down 1.5s infinite;
 	-webkit-animation: down 1.5s infinite;
@@ -37,11 +40,26 @@ body {
 		left: 18px;
 		width: 18px;
 		height: 18px;
-		border-left: 2px solid #fce08e;
-  	border-bottom: 2px solid #fce08e;
+		border-left: 3px solid #fce08e;
+  	border-bottom: 3px solid #fce08e;
 		transform: rotate(-45deg);
 	}
 }
+
+@media screen and (max-width: 1024px) {
+    .scroll {
+       left: 46%;
+       top: 83%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+  .scroll {
+       left: 42%;
+       top: 82%;
+    }
+  }
+
 
 @keyframes down {
 	0% {
