@@ -36,8 +36,8 @@ body {
 	&::before {
 		content: '';
 		position: absolute;
-		top: 15px;
-		left: 18px;
+		top: 14px;
+		left: 32%;
 		width: 18px;
 		height: 18px;
 		border-left: 3px solid #fce08e;
