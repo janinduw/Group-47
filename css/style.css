@@ -11,6 +11,87 @@ body {
   line-height: 1.6;
 }
 
+
+
+.field {
+	align-items: center;
+  position: absolute;
+	justify-content: space-around;
+	width: 300px;
+  left: 48%;
+  top: 82%;
+}
+
+.scroll {
+	width: 60px;
+	height: 60px;
+	border: 2px solid #fce08e;
+	border-radius: 50%;
+	position: absolute;
+	animation: down 1.5s infinite;
+	-webkit-animation: down 1.5s infinite;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 18px;
+		width: 18px;
+		height: 18px;
+		border-left: 2px solid #fce08e;
+  	border-bottom: 2px solid #fce08e;
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+
+@keyframes scroll {
+	0% {
+		height: 40px;
+	}
+	30% {
+		height: 70px;
+	}
+	60% {
+		height: 40px;
+	}
+}
+
+@-webkit-keyframes scroll {
+	0% {
+		height: 40px;
+	}
+	30% {
+		height: 70px;
+	}
+	60% {
+		height: 40px;
+	}
+}
+
 /* Navigation bar styles */
 nav {
   padding: 2.5vw 0px;
@@ -323,7 +404,7 @@ footer {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   margin-top: -25px; /* Adjust as needed to overlap with the Hero section */
-  border-top: 5px solid #caa50139;
+  border-top: 5px solid #caa50162;
   
 }
 
@@ -482,6 +563,7 @@ figcaption {
   align-items: center;
   justify-content: center;
 }
+
 
 #hero-gallery .hero-content h1 {
   color: #878787;

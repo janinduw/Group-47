@@ -40,20 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-window.addEventListener('load', () => {
-  // When the page has fully loaded, fade out the overlay
-  document.getElementById('page-overlay').style.opacity = '0';
-
-  // After the fade-out transition, set display to 'none'
-  setTimeout(() => {
-    document.getElementById('page-overlay').style.display = 'none';
-  }, 500); // This duration should match the CSS transition duration
-
-  // Start the animations after the overlay is hidden
-  setTimeout(() => {
-    startAnimations();
-  }, 600);
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {
